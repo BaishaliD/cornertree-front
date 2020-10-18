@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cornertree-front';
+  title = 'Cornertree Jobs';
+
+  enlarge(id){
+    document.getElementById(id).style.transform="scale(1.1)";
+  }
+
+  normalize(id){
+    document.getElementById(id).style.transform="scale(1.0)";
+  }
 }

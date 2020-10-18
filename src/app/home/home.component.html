@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="justify-content-md-center">
+        <p>Search for a skill, location or job role. For example: Javascript, Mumbai, or Fullstack developer</p>
+
+        <input class="col-lg-6" id="typeahead-prevent-manual-entry"
+            placeholder="Search using skills, locations and job roles..." type="text" class="form-control"
+            [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="formatter" [resultFormatter]="formatter"
+            [editable]='false' />
+            <div class="justify-content-center mx-auto" style="margin: 10px 0; display:flex; justify-content: center;">
+        <button type="submit" class="btn btn-primary btn-lg" (click)="searchJob()">Search</button>
+        </div>
+
+        <ul>
+            <li *ngFor="let job of joblist">
+                woohoo
+                <div>
+                    Job Role : <span>{{job.jobRole}}</span>
+                </div>
+                <div>
+                    Function : <span>{{job.function}}</span>
+                </div>
+                <div>
+                    Sub Function: <span>{{job.subFunction}}</span>
+                </div>
+                <div>
+                    Company : <span>{{job.company}}</span>
+                </div>
+                <div>
+                    Core skills : <span>{{job.coreSkills}}</span>
+                </div>
+                <div>
+                    Soft skills : <span>{{job.softSkills}}</span>
+                </div>
+                <div>
+                    Location : <span>{{job.location}}</span>
+                </div>
+                <div>
+                    Pin : <span>{{job.pin}}</span>
+                </div>
+                <div>
+                    Compensation : <span>{{job.compensation}}</span>
+                </div>
+                <div>
+                    Job description : <span>{{job.jd}}</span>
+                </div>
+                <button class="btn btn-primary">Apply</button>
+            </li>
+        </ul>
+    </div>
+</div>

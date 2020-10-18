@@ -1,0 +1,74 @@
+<div class="container">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Name</label>
+                <input type="name" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="phone">Phone</label>
+                <input type="phone" class="form-control" id="phone" placeholder="Phone">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="experience">Experience</label>
+                <select id="experience" class="form-control">
+                    <option selected>Fresher</option>
+                    <option>Experience</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="function">Preferred Functions</label>
+                <select id="function" class="form-control">
+                    <option selected></option>
+                    <option *ngFor="let item of functions">{{item}}</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="location">Preferred Locations</label>
+                <select id="location" class="form-control">
+                    <option selected></option>
+                    <option *ngFor="let item of locations">{{item}}</option>
+                </select>
+            </div>
+        </div>
+   
+
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Broadcast
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div> -->
+                    <div class="modal-body">
+                        There are 300 recruiters similar to your skills. Would you like to “ review” or “broadcast”?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Review</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Broadcast</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
